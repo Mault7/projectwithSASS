@@ -1,0 +1,31 @@
+.phrase {
+    position: fixed;
+    top: 70%;
+    width: 100%;
+    height: 100%;
+    background-color: #97d3ec;
+    border-radius: 20%;
+    font-size: 200px;
+}
+
+.phrase__text {
+    position: absolute;
+    text: {
+        align: center;
+    }
+    color: #f4faf9;
+}
+
+.phrase__img {
+    position: relative;
+    left: -25%;
+    width: 20%;
+    height: 35%;
+    border-radius: 10%;
+}
+
+.phrase:hover {
+    transition: 2s;
+    font-size: 250px;
+    top: 65%;
+}

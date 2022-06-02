@@ -1,0 +1,114 @@
+@mixin animationClouds {
+    animation-name: moveClouds;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@mixin animationSun {
+    animation-name: moveSun;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+}
+
+.scenary {
+    top: 10%;
+    width: 100%;
+    height: 70%;
+    background: #80cef5;
+    position: fixed;
+    overflow: hidden;
+}
+
+.scenary__cloud {
+    width: 350px;
+    height: 120px;
+    background: #BFF;
+    background: linear-gradient(top, #BFF 5%, #DFF 100%);
+    background: -webkit-linear-gradient(top, #FFF 1%, #BFF 100%);
+    background: -moz-linear-gradient(top, #BFF 5%, #DFF 100%);
+    background: -ms-linear-gradient(top, #BFF 5%, #DFF 100%);
+    background: -o-linear-gradient(top, #BFF 5%, #DFF 100%);
+    border-radius: 100px;
+    position: absolute;
+    margin: 120px auto 20px;
+    transition: 2s;
+}
+
+.scenary__cloud--cloud1left {
+    @include animationClouds;
+    top: 10%;
+    left: 0%;
+}
+
+.scenary__cloud--cloud2left {
+    @include animationClouds;
+    top: 10%;
+    left: -40%;
+}
+
+.scenary__cloud--cloud3left {
+    @include animationClouds;
+    top: 10%;
+    left: -80%;
+}
+
+.scenary__cloud--cloud4right {
+    @include animationClouds;
+    top: 40%;
+    left: 80%;
+}
+
+.scenary__cloud--cloud5right {
+    @include animationClouds;
+    top: 40%;
+    left: 40%;
+}
+
+.scenary__cloud--cloud6right {
+    @include animationClouds;
+    top: 40%;
+    left: 20%;
+}
+
+.scenary__cloud::after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 50px;
+    border-radius: 100px;
+}
+
+.scenary__cloud::before {
+    width: 200px;
+    height: 200px;
+    top: -90px;
+    right: 50px;
+    border-radius: 200px;
+}
+
+.scenary__cloud::after,
+.scenary__cloud::before {
+    content: '';
+    position: absolute;
+    background: #FFF;
+    z-index: -1
+}
+
+.scenary__cloud:hover {
+    padding-left: 50px;
+}
+
+.scenary__sun {
+    position: relative;
+    background: yellow;
+    width: 300px;
+    height: 300px;
+    clip-path: circle(30%);
+    transition-duration: 2s;
+    @include animationSun;
+}
+
+.scenary__sun:hover {
+    clip-path: circle(50%);
+}

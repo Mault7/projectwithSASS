@@ -1,0 +1,35 @@
+@keyframes mover {
+    0% {
+        transform: translatex(0%);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: translatex(700%);
+        display: none;
+    }
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translatex(-300%);
+    }
+    25% {}
+    50% {}
+    100% {
+        transform: translatex(700%);
+    }
+}
+
+@keyframes moveSun {
+    0% {
+        transform: translatex(-300%);
+    }
+    100% {
+        transform: translatex(300%);
+    }
+}

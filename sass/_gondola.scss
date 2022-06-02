@@ -1,0 +1,90 @@
+@mixin animationGondola {
+    animation-name: mover;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.gondola {
+    position: absolute;
+    width: $gondolaWidth;
+    height: $gondolaHeight;
+    border-radius: $gondolaBorderRadius;
+    background-color: $gondolaColor;
+    overflow: hidden;
+    border: $gondolaBorder;
+}
+
+.gondola--move-lefttoright {
+    @include animationGondola;
+}
+
+.gondola--move-righttoleft {
+    @include animationGondola;
+    animation-direction: reverse;
+}
+
+.gondola__window {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    border-radius: 35%;
+    border-bottom: 15px solid black;
+    background-color: rgb(36, 134, 180);
+}
+
+.gondola__door {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    border-radius: 20%;
+    background-color: orange;
+    border: 3px solid black;
+}
+
+.gondola__door--left {
+    margin-left: 30%;
+}
+
+.gondola__door--right {
+    margin-left: 50%;
+}
+
+.gondola__doorwindow {
+    position: absolute;
+    margin-left: calc(10% - 5px);
+    margin-top: calc(10% - 5px);
+    width: 80%;
+    height: 60%;
+    border-radius: 10%;
+    background-color: rgb(36, 134, 180);
+    border: 5px solid black;
+}
+
+.gondola__message-help {
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 5%;
+    border-radius: 10%;
+    width: 20%;
+    height: 20%;
+    display: none;
+}
+
+.gondola__message-help--style1 {
+    font: {
+        size: 20px;
+    }
+    text: {
+        align: center;
+    }
+    background-color: white;
+    color: rgb(36, 134, 180);
+}
+
+.gondola:hover {
+    animation-play-state: paused;
+}
+
+.gondola:hover .gondola__message-help {
+    display: block;
+}
