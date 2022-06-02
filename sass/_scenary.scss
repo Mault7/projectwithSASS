@@ -1,6 +1,6 @@
 @mixin animationClouds {
     animation-name: moveClouds;
-    animation-duration: 40s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -12,7 +12,6 @@
 }
 
 .scenary {
-    top: 10%;
     width: 100%;
     height: 70%;
     background: #80cef5;
@@ -35,39 +34,27 @@
     transition: 2s;
 }
 
-.scenary__cloud--cloud1left {
+.scenary__cloud--cloud1 {
     @include animationClouds;
-    top: 10%;
+    top: 20%;
     left: 0%;
 }
 
-.scenary__cloud--cloud2left {
+.scenary__cloud--cloud2 {
     @include animationClouds;
-    top: 10%;
-    left: -40%;
-}
-
-.scenary__cloud--cloud3left {
-    @include animationClouds;
-    top: 10%;
-    left: -80%;
-}
-
-.scenary__cloud--cloud4right {
-    @include animationClouds;
-    top: 40%;
+    top: 50%;
     left: 80%;
 }
 
-.scenary__cloud--cloud5right {
+.scenary__cloud--cloud3 {
     @include animationClouds;
-    top: 40%;
+    top: 50%;
     left: 40%;
 }
 
-.scenary__cloud--cloud6right {
+.scenary__cloud--cloud4 {
     @include animationClouds;
-    top: 40%;
+    top: 50%;
     left: 20%;
 }
 
@@ -100,6 +87,7 @@
 }
 
 .scenary__sun {
+    top: 10%;
     position: relative;
     background: yellow;
     width: 300px;
