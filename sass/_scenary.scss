@@ -12,16 +12,16 @@
 }
 
 .scenary {
-    width: 100%;
-    height: 70%;
+    width: $widthInPercent100;
+    height: $heigthInPercent100 - 30%;
     background: #80cef5;
     position: fixed;
     overflow: hidden;
 }
 
 .scenary__cloud {
-    width: 350px;
-    height: 120px;
+    width: $scenaryCloudwidth;
+    height: $scenaryCloudheight;
     background: #BFF;
     background: linear-gradient(top, #BFF 5%, #DFF 100%);
     background: -webkit-linear-gradient(top, #FFF 1%, #BFF 100%);
@@ -59,16 +59,16 @@
 }
 
 .scenary__cloud::after {
-    width: 100px;
-    height: 100px;
+    width: $scenaryCloudwidthAndHeigthAfter;
+    height: $scenaryCloudwidthAndHeigthAfter;
     top: -50px;
     left: 50px;
     border-radius: 100px;
 }
 
 .scenary__cloud::before {
-    width: 200px;
-    height: 200px;
+    width: $scenaryCloudwidthAndHeigthBefore;
+    height: $scenaryCloudwidthAndHeigthBefore;
     top: -90px;
     right: 50px;
     border-radius: 200px;
@@ -87,16 +87,16 @@
 }
 
 .scenary__sun {
-    top: 10%;
+    top: 20%;
     position: relative;
     background: yellow;
-    width: 300px;
-    height: 300px;
-    clip-path: circle(30%);
+    width: $scenarySunwidth;
+    height: $scenarySunheight;
+    clip-path: circle(25%);
     transition-duration: 2s;
     @include animationSun;
 }
 
 .scenary__sun:hover {
-    clip-path: circle(50%);
+    clip-path: circle(30%);
 }

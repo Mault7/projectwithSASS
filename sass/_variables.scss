@@ -1,16 +1,39 @@
 $bodyColorbg: #bbebfb;
+$fullHDwidth: calc(1920 / 100);
+$fullHDheight: calc(1080 / 100);
+$ultraWeidthWidth: calc(2560 / 100);
+$ultraWeidthHeight: calc(1080 / 100);
 
 /*sizes*/
 
 $widthInPercent100: 100%;
 $heigthInPercent100:100%;
 
-/* gondola variables */
+/* gondola  variables */
 
-$gondolaWidth:300px;
-$gondolaHeight:250px;
-$gondolaBorderRadius:35%;
+$gondolaWindowsColor:rgb(36, 134, 180);
 $gondolaColor:orange;
+$gondolaMessageColor: rgb(36, 134, 180);
+$gondolaWidth:calc( (300 / $fullHDwidth) * 1%);
+$gondolaHeight:calc( (250 / $fullHDheight) * 1%);
+$gondolaBorderRadius:35%;
 $gondolaBorder: 10px solid black;
-$gondolaWindowColor:rgb(36, 134, 180);
 $gondolaDoorwidth:20%;
+$gondolaSizetextMessage:20px;
+$gondolaWindowHeight:60%;
+
+/* Scenary*/
+
+$scenaryColor: #80cef5;
+$scenaryCloudwidth: 350px;
+$scenaryCloudheight: 120px;
+$scenaryCloudwidthAndHeigthAfter: 100px;
+$scenaryCloudwidthAndHeigthBefore: 200px;
+$scenarySunwidth: calc( (300 / $fullHDwidth) * 1%);
+$scenarySunheight: calc( (300 / $fullHDheight) * 1%);
+
+/*Phrase*/
+
+$phraseColorBg: #97d3ec;
+$phraseColorText: #f4faf9;
+$phraseFontSize: 200px;
